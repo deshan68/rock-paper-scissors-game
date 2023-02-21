@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+.main-div-rules-card {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: white;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 15px;
+}
+.rules-title-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rules-title {
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+}
+.close-icon {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .main-div-rules-card {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0px;
+  }
+  .rules-img img {
+    height: 200px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .rules-title-icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .rules-title {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 0px;
+  }
+  .close-icon {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    padding-right: 0px;
+    height: 40px;
+  }
+}

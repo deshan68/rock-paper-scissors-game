@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+.gameboard-main-div {
+  width: 700px;
+  height: 280px;
+  position: relative;
+  margin-top: 10;
+  display: flex;
+}
+
+.you-picked-div {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 15px hsla(230, 89%, 62%, 0) solid;
+  border-radius: 100px;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.house-picked-div {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 15px hsla(39, 89%, 49%, 0) solid;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.picked-title {
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.picked-title p {
+  font-size: 25px;
+}
+.result-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.playagain-button {
+  width: 150px;
+  background-color: white;
+  margin: 10px;
+}
+.playagain-button:hover {
+  color: hsl(349, 71%, 52%);
+}
+.result-title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+@keyframes myMove {
+  50% {
+    box-shadow: 0 0 6em hsl(220, 100%, 74%);
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .gameboard-main-div {
+    max-width: 100vw;
+    height: 500px;
+    padding-top: 20px;
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .picked-title {
+    flex-direction: column-reverse;
+  }
+  .you-picked-div {
+    left: 10%;
+    top: -40%;
+    height: 100px;
+    width: 100px;
+  }
+  .you-picked-div img {
+    height: 60px;
+    width: auto;
+  }
+  .house-picked-div {
+    right: 10%;
+    top: -40%;
+    height: 100px;
+    width: 100px;
+  }
+  .house-picked-div img {
+    height: 60px;
+    width: auto;
+  }
+  .result-title {
+    font-size: 50px;
+  }
+  .result-div {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .playagain-button {
+    width: 300px;
+    height: 45px;
+    background-color: white;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+main {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titile-with-score-card {
+  border-radius: 12px;
+  width: 500px;
+  height: 110px;
+  border: 1px hsl(217, 16%, 45%) solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  margin-left: 15px;
+  text-align: left;
+  line-height: 22px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+.score-board {
+  background-color: white;
+  margin-right: 15px;
+  padding: 8px 33px 8px 33px;
+  border-radius: 5px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.score-title {
+  color: hsl(229, 64%, 46%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 12px;
+}
+.score {
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 40px;
+}
+.all-item-svg-card {
+  width: 500px;
+  height: 280px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.tringle-div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rock-div {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-60%);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  border: 15px hsl(349, 71%, 52%) solid;
+  justify-content: center;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.rock-div:hover {
+  filter: drop-shadow(0 0 1em hsl(349, 70%, 56%));
+}
+.paper-div {
+  position: absolute;
+  left: 10%;
+  transform: translateX(-10%);
+  top: -60%;
+  transform: translateY(60%);
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 15px hsl(230, 89%, 62%) solid;
+  border-radius: 100px;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.paper-div:hover {
+  filter: drop-shadow(0 0 1em hsl(230, 89%, 65%));
+}
+.scissor-div {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-60%);
+  top: -60%;
+  transform: translateY(60%);
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 15px hsl(39, 89%, 49%) solid;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.scissor-div:hover {
+  filter: drop-shadow(0 0 1em hsl(40, 84%, 53%));
+}
+.rules-button {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}
+button {
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: transparent;
+  cursor: pointer;
+  border: hsl(217, 16%, 45%) 1px solid;
+  transition: border-color 0.25s;
+  color: hsl(217, 16%, 45%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 10px 35px;
+}
+button:hover {
+  border-color: #f6f6f6;
+  color: #f6f6f6;
+}
+
+@media only screen and (max-width: 530px) {
+  .titile-with-score-card {
+    width: 350px;
+    height: 80px;
+  }
+  .title {
+    line-height: 18px;
+    font-size: 18px;
+  }
+  .score-board {
+    line-height: 18px;
+  }
+  .score-title {
+    font-size: 9px;
+  }
+  .score {
+    font-size: 25px;
+  }
+
+  .all-item-svg-card {
+    max-width: 400px;
+    height: 280px;
+  }
+
+  .tringle-div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .rock-div {
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+  }
+
+  .paper-div {
+    left: 10%;
+    top: -40%;
+    height: 100px;
+    width: 100px;
+  }
+
+  .scissor-div {
+    right: 10%;
+    top: -40%;
+    height: 100px;
+    width: 100px;
+  }
+
+  .rules-button {
+    bottom: 10%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .scissor-div img,
+  .paper-div img,
+  .rock-div img {
+    height: 60px;
+    width: auto;
+  }
+  .tringle-div img {
+    height: 200px;
+  }
+  button {
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 35px;
+  }
+}
